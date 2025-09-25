@@ -48,5 +48,13 @@ function processPayroll(employee) {
 // Step 7: Loop and Log
 
 employees.forEach(employee => {
-    console.log(processPayroll(employee));
+    const Payroll = processPayroll(employee);
+
+    console.log(
+`Payroll for ${Payroll.name}:
+    Base Pay: $${Payroll.basePay}
+    Overtime Pay: $${Payroll.overtimePay}
+    Gross Pay: $${Payroll.grossPay}
+    Net Pay: $${Payroll.netPay}`);
+    
 });
